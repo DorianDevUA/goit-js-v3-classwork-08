@@ -69,6 +69,9 @@
 //   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
 // ];
 
+// const flattenedTags = tweets.flatMap(tweet => tweet.tags);
+// console.log('Flattened Tags:', flattenedTags);
+
 // const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
 // console.log(allTags);
 

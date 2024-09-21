@@ -1,17 +1,20 @@
-// /*
-//  * Array.prototype.map()
-//  * - Поэлементо перебирает оригинальный массив
-//  * - Не изменяет оригинальный массив
-//  * - Возвращает новый массив такой же длины
-//  */
+/*
+ * Array.prototype.map()
+ * - Поэлементо перебирает оригинальный массив
+ * - Не изменяет оригинальный массив
+ * - Возвращает новый массив такой же длины
+ */
 
 // const numbers = [5, 10, 15, 20, 25];
 
 // const doubledNums = numbers.map(number => {
 //   return number * 3;
 // });
-// // console.log('numbers', numbers);
-// // console.log('doubledNums', doubledNums);
+
+// console.log('numbers', numbers);
+// console.log('doubledNums', doubledNums);
+
+// ================================================
 
 // const players = [
 //   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
@@ -22,35 +25,38 @@
 // ];
 // console.table(players);
 
-// /*
-//  * Получаем массив имён всех игроков
-//  */
-
+/*
+ * Получаем массив имён всех игроков
+ */
+// // const playerNames = players.map(player => {
+// //   // console.log(player);
+// //   return player.name;
+// // });
 // const playerNames = players.map(player => player.name);
-// // console.log('playerNames', playerNames);
+// console.log('playerNames', playerNames);
 
 // const playerIds = players.map(player => player.id);
-// // console.log('playerIds', playerIds);
+// console.log('playerIds', playerIds);
 
-// // const res = players.map(({ name, online }) => ({ name, online }));
-// // console.log('res', res);
+// // const res = players.map(player => {
+// //   return { name: player.name, online: player.online };
+// // });
+// const res = players.map(({ name, online }) => ({ name, online }));
+// console.log('res', res);
 
-// /*
-//  * Увеличиваем кол-во поинтов каждого игрока на 10%
-//  */
-
+/*
+ * Увеличиваем кол-во поинтов каждого игрока на 10%
+ */
 // const upatedPlayers = players.map(player => ({
 //   ...player,
 //   points: player.points * 1.1,
 // }));
 
-// // console.table(upatedPlayers);
-// // console.log(upatedPlayers);
+// console.table(upatedPlayers);
 
-// /*
-//  * Увеличиваем кол-во часов игрока по id
-//  */
-
+/*
+ *Увеличиваем кол-во часов игрока по id
+ */
 // const playerIdToUpdate = 'player-3';
 
 // const updatedPlayers = players.map(player => {
@@ -63,10 +69,9 @@
 
 //   return player;
 // });
+// console.table(updatedPlayers);
 
-// // const updatedPlayers = players.map(player =>
-// //   playerIdToUpdate === player.id
-// //     ? { ...player, timePlayed: player.timePlayed + 100 }
-// //     : player,
-// // );
-// // console.table(updatedPlayers);
+// const updatedPlayers = players.map(player =>
+//   playerIdToUpdate === player.id ? { ...player, timePlayed: player.timePlayed + 100 } : player
+// );
+// console.table(updatedPlayers);
